@@ -1,5 +1,6 @@
 package spring;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,5 +32,13 @@ public class MemberDao {
 	
 	public void update(Member member) {
 		map.put(member.getEmail(), member);
+	}
+	
+	/**
+	 * 
+	 * @return Collection<Member> 맵에 존재하는 모든 Member를 반환한다.
+	 */
+	public Collection<Member> selectAll() {
+		return map.values();
 	}
 }
